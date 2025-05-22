@@ -3,12 +3,10 @@ import pandas as pd
 import streamlit as st
 import common
 
-with st.sidebar:
-    st.write("Engajamento")
-
+common.stream_page_config_start()
 with st.container():
     st.title("Dashboard grupo 7")
-    st.image("assets/wallpaper_music.jpg")
+    st.image("assets/wallpaper_music.jpg", use_container_width=True)
     df_engajamento = common.load_engajamento_dataset()
 
     st.write("---- Musicas-chan -----")
@@ -20,10 +18,10 @@ with st.container():
                 em propagação""")
 
     fig = common.plot_views_pie_chart_engajamento1(df_engajamento)
-    st.plotly_chart(fig)
+    st.plotly_chart(fig,use_container_width=True)
 
     fig = common.plot_views_bar_chart_engajamento2(df_engajamento)
-    st.plotly_chart(fig)
+    st.plotly_chart(fig,use_container_width=True)
 
     st.header("Quais plataformas entregam um maior engajamento proporcionais ?")
     st.write("""
@@ -39,11 +37,12 @@ with st.container():
             efeito propagador muito interessante.""")
 
     fig = common.plot_tiktok_pie_chart(df_engajamento)
-    st.plotly_chart(fig)
+    st.plotly_chart(fig,use_container_width=True)
 
     fig = common.plot_youtube_pie_chart(df_engajamento)
-    st.plotly_chart(fig)
+    st.plotly_chart(fig,use_container_width=True)
 
     fig = common.plot_spotify_pie_chart(df_engajamento)
-    st.plotly_chart(fig)
+    st.plotly_chart(fig, use_container_width=True)
 
+common.stream_page_config_end()
