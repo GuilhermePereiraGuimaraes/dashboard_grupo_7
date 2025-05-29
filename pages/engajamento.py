@@ -5,11 +5,11 @@ import common
 
 common.stream_page_config_start()
 with st.container():
-    st.title("Dashboard grupo 7")
-    st.image("assets/wallpaper_music.jpg", use_container_width=True)
+    st.title("Engajamento")
+    st.image("assets/social_media_wallpaper.jpg", use_container_width=True)
     df_engajamento = common.load_engajamento_dataset()
 
-    st.write("---- Musicas-chan -----")
+    st.write("---- Social media -----")
     st.header("Quais plataformas mais impactam na visibilidade dos músicos ?")
     st.write("""    O Tiktok detém o maior impacto a respeito da visualização das músicas pois a plataforma foca em vídeos 
                 curtos e com um alto poder de propagação, isso facilita a exposição da música para um maior número de 
