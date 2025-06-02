@@ -7,6 +7,7 @@ def stream_page_config_start():
     st.set_page_config(
         page_title="Dashboard Grupo 7",
         initial_sidebar_state="expanded",
+        layout="wide",
         menu_items={
             'Get Help': None,
             'Report a bug': None,
@@ -17,8 +18,9 @@ def stream_page_config_start():
     st.sidebar.title("Navegação")
     st.sidebar.page_link("app.py", label="🏠 Início")
     st.sidebar.page_link("pages/engajamento.py", label="📊 Engajamento")
-    st.sidebar.page_link("pages/monetizacao.py", label="💰 Monetização")
-    st.sidebar.page_link("pages/generos.py", label="🎵 Gêneros Musicais")
+    st.sidebar.page_link("pages/generos.py", label="🎵 Generos Musicais")
+    st.sidebar.page_link("pages/monetizacao.py", label="💸 Monetização")
+    st.sidebar.page_link("pages/impacto_economico.py", label="📈 Impacto econômico")
 
 # Ocultar menu lateral (opcional)
 def stream_page_config_end():
