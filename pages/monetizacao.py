@@ -18,8 +18,9 @@ A indústria musical passou por grandes transformações com o avanço das plata
 """, unsafe_allow_html=True)
 
 # Caminho do CSV com os dados
-base_path = os.path.dirname(os.path.dirname(__file__))
-file_path = os.path.join(base_path, "streaming_pagamento.csv.csv")
+# base_path = os.path.dirname(os.path.dirname(__file__))
+# file_path = os.path.join(base_path, "streaming_pagamento.csv.csv")
+file_path = "datasets/streaming_pagamento.csv.csv"
 
 # Dados fixos: usuários ativos por plataforma (em milhões)
 usuarios_data = {
