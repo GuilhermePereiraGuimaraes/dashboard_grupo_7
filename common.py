@@ -17,6 +17,8 @@ def stream_page_config_start():
     st.sidebar.title("Navegação")
     st.sidebar.page_link("app.py", label="🏠 Início")
     st.sidebar.page_link("pages/engajamento.py", label="📊 Engajamento")
+    st.sidebar.page_link("pages/monetizacao.py", label="💰 Monetização")
+    st.sidebar.page_link("pages/generos.py", label="🎵 Gêneros Musicais")
 
 # Ocultar menu lateral (opcional)
 def stream_page_config_end():

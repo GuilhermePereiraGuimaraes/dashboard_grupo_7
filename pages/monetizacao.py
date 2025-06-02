@@ -3,9 +3,11 @@ import pandas as pd
 import matplotlib.pyplot as plt
 import plotly.express as px
 import os
+import common 
 
+common.stream_page_config_start()
 #  Configuração inicial
-st.set_page_config(page_title="Monetização", layout="wide")
+# st.set_page_config(page_title="Monetização", layout="wide")
 
 #  Cabeçalho centralizado
 st.markdown("<h1 style='text-align: center;'>Monetização dos Artistas Brasileiros</h1>", unsafe_allow_html=True)
@@ -100,3 +102,4 @@ else:
     st.warning(f"⚠️ Arquivo de dados '{file_path}' não encontrado. Verifique o caminho.")
 
 st.markdown("<p style='text-align: center; font-size: 0.9em;'>Grupo 7 GTI 2025</p>", unsafe_allow_html=True)
+common.stream_page_config_end()

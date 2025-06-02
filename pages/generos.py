@@ -5,9 +5,11 @@ import plotly.express as px
 import unicodedata
 import json
 import requests
+import common
 
 def main():
-    st.set_page_config(page_title="Gêneros Musicais e Distribuição dos Artistas no Brasil", layout="wide")
+    common.stream_page_config_start()
+    # st.set_page_config(page_title="Gêneros Musicais e Distribuição dos Artistas no Brasil", layout="wide")
     st.title("🎶 Quais são os gêneros musicais e a distribuição geográfica dos principais artistas em atividade no Brasil?")
 
     st.markdown("""
@@ -16,7 +18,7 @@ def main():
     Acompanhe como a produção musical brasileira se manifesta em diferentes territórios e conheça o perfil dos artistas que fazem parte da cena independente e regional.
     """)
 
-    caminho_arquivo = "C:/Users/kamil/artista.csv"
+    caminho_arquivo = "datasets/artista.csv"
     try:
         df = pd.read_csv(caminho_arquivo)
     except FileNotFoundError:
@@ -134,6 +136,8 @@ def main():
             title='Comparativo de Popularidade por Posição'
         )
         st.plotly_chart(fig_evolucao, use_container_width=True)
+    common.stream_page_config_end()
+
 
 if __name__ == '__main__':
     main()
