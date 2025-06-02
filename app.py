@@ -4,7 +4,15 @@ import streamlit as st
 stream_page_config_start()
 
 st.title("📊 Dashboard - Grupo 7")
-st.write("Bem-vindo ao painel de visualizações de músicas mais tocadas em 2024.")
-st.write("Use a navegação lateral para explorar os dados de engajamento nas plataformas.")
+st.markdown("## Bem-vindo ao Dashboard da Equipe 7.")
+
+st.markdown("""
+**Nossa equipe é composta por:**
+- Erica Souza  
+- Guilherme Pereira  
+- João Lisot  
+- Tullio Prota  
+- Victor Dias
+""")
 
 stream_page_config_end()
